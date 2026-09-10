@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "D:\\gradle-9.4.1\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\layout_activity_checkin.xml.flat",
+        "source": "D:\\gradle-9.4.1\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\layout\\activity_checkin.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\layout_activity_sms.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\layout\\activity_sms.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\drawable_bg_btn_primary.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\drawable\\bg_btn_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\layout_activity_checkin.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\layout\\activity_checkin.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\raw_alert.wav.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\raw\\alert.wav"
+    },
+    {
+        "merged": "com.meituanalert.app-debug-3:/layout_activity_checkin.xml.flat",
+        "source": "com.meituanalert.app-main-5:/layout/activity_checkin.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\drawable_bg_btn_outline.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\drawable\\bg_btn_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\drawable_bg_edit_rounded.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\drawable\\bg_edit_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\layout_activity_alert.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\layout\\activity_alert.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\drawable_bg_card.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\drawable\\bg_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\layout_dialog_volume.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\layout\\dialog_volume.xml"
+    },
+    {
+        "merged": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-debug-3:\\drawable_bg_btn_step.xml.flat",
+        "source": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-main-5:\\drawable\\bg_btn_step.xml"
+    }
+]

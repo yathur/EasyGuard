@@ -1,0 +1,110 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yathur\\.gradle\\daemon\\9.4.1\\com.meituanalert.app-mergeDebugResources-1:\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yathur\\AndroidDev\\MeituanAlert\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "5,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "208,363",
+                        "endLines": "7,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "358,517"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yathur\\AndroidDev\\MeituanAlert\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yathur\\AndroidDev\\MeituanAlert\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "-1,2",
+                        "startColumns": "-1,4",
+                        "startOffsets": "-1,55",
+                        "endColumns": "-1,41",
+                        "endOffsets": "-1,92"
+                    },
+                    "to": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "112,166",
+                        "endColumns": "53,41",
+                        "endOffsets": "161,203"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.meituanalert.app-mergeDebugResources-1:/values/values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yathur\\AndroidDev\\MeituanAlert\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "5,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "208,363",
+                        "endLines": "7,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "358,517"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yathur\\AndroidDev\\MeituanAlert\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yathur\\AndroidDev\\MeituanAlert\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "-1,2",
+                        "startColumns": "-1,4",
+                        "startOffsets": "-1,55",
+                        "endColumns": "-1,41",
+                        "endOffsets": "-1,92"
+                    },
+                    "to": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "112,166",
+                        "endColumns": "53,41",
+                        "endOffsets": "161,203"
+                    }
+                }
+            ]
+        }
+    ]
+}

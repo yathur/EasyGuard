@@ -1,0 +1,8 @@
+com.meituanalert.app-pngs-0 C:\Users\yathur\AndroidDev\MeituanAlert\app\build\generated\res\pngs\debug
+com.meituanalert.app-updated_navigation_xml-1 C:\Users\yathur\AndroidDev\MeituanAlert\app\build\generated\updated_navigation_xml\debug
+com.meituanalert.app-packageDebugResources-2 C:\Users\yathur\AndroidDev\MeituanAlert\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.meituanalert.app-packageDebugResources-3 C:\Users\yathur\AndroidDev\MeituanAlert\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.meituanalert.app-debug-4 C:\Users\yathur\AndroidDev\MeituanAlert\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.meituanalert.app-debug-5 C:\Users\yathur\AndroidDev\MeituanAlert\app\src\debug\res
+com.meituanalert.app-main-6 C:\Users\yathur\AndroidDev\MeituanAlert\app\src\main\res
+gradleHome-0 D:\gradle-9.4.1

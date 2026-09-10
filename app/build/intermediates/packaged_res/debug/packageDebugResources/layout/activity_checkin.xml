@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏢 钉钉打卡助手"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="到达打卡点半径内、检测到移动且命中打卡时段时，自动打开钉钉。两个时段各自独立计数、按天重置。"
+            android:textSize="13sp"
+            android:textColor="#616161"
+            android:paddingTop="4dp" />
+
+        <!-- 状态卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:layout_marginTop="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="启用打卡助手"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <Switch
+                    android:id="@+id/sw_checkin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/tv_state_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="●"
+                    android:textSize="10sp"
+                    android:textColor="#B71C1C" />
+                <TextView
+                    android:id="@+id/tv_service_state"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:text="服务状态：未开启"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#B71C1C" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 打卡点卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📍 打卡点"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="打卡点：未设置（点下方按钮用当前位置）"
+                android:textSize="13sp"
+                android:textColor="#616161"
+                android:paddingTop="6dp" />
+
+            <Button
+                android:id="@+id/btn_point"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_outline"
+                android:text="用当前位置设为打卡点"
+                android:textColor="#1E88E5"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_test_open"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_btn_outline"
+                android:text="测试打开钉钉"
+                android:textColor="#1E88E5"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- 触发条件卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🚶 触发条件"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="判定半径（米）"
+                android:textSize="12sp"
+                android:textColor="#616161"
+                android:paddingTop="10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+                <Button
+                    android:id="@+id/btn_radius_minus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="－"
+                    android:textSize="18sp"
+                    android:textColor="#37474F" />
+                <EditText
+                    android:id="@+id/et_radius"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="100" />
+                <Button
+                    android:id="@+id/btn_radius_plus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="＋"
+                    android:textSize="18sp"
+                    android:textColor="#37474F" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="移动速度阈值（米/秒，0 = 不要求移动，进半径即触发）"
+                android:textSize="12sp"
+                android:textColor="#616161"
+                android:paddingTop="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+                <Button
+                    android:id="@+id/btn_speed_minus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="－"
+                    android:textSize="18sp"
+                    android:textColor="#37474F" />
+                <EditText
+                    android:id="@+id/et_speed"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="1.0" />
+                <Button
+                    android:id="@+id/btn_speed_plus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="＋"
+                    android:textSize="18sp"
+                    android:textColor="#37474F" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 时段卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🕐 打卡时段"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上班时段"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#424242"
+                android:paddingTop="10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+                <EditText
+                    android:id="@+id/et_morning_start"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="time"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="07:00" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 至 "
+                    android:textColor="#757575"
+                    android:gravity="center_vertical" />
+                <EditText
+                    android:id="@+id/et_morning_end"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="time"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="09:00" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="上班时段次数"
+                    android:textSize="13sp"
+                    android:textColor="#616161" />
+                <Button
+                    android:id="@+id/btn_morning_count_minus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="－"
+                    android:textSize="16sp"
+                    android:textColor="#37474F" />
+                <EditText
+                    android:id="@+id/et_morning_count"
+                    android:layout_width="56dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="1" />
+                <Button
+                    android:id="@+id/btn_morning_count_plus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="＋"
+                    android:textSize="16sp"
+                    android:textColor="#37474F" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下班时段"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#424242"
+                android:paddingTop="6dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+                <EditText
+                    android:id="@+id/et_evening_start"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="time"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="17:30" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 至 "
+                    android:textColor="#757575"
+                    android:gravity="center_vertical" />
+                <EditText
+                    android:id="@+id/et_evening_end"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="time"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="21:00" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="下班时段次数"
+                    android:textSize="13sp"
+                    android:textColor="#616161" />
+                <Button
+                    android:id="@+id/btn_evening_count_minus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="－"
+                    android:textSize="16sp"
+                    android:textColor="#37474F" />
+                <EditText
+                    android:id="@+id/et_evening_count"
+                    android:layout_width="56dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="1" />
+                <Button
+                    android:id="@+id/btn_evening_count_plus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="＋"
+                    android:textSize="16sp"
+                    android:textColor="#37474F" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 保存设置 -->
+        <Button
+            android:id="@+id/btn_save_checkin"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_btn_primary"
+            android:text="保存设置"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <!-- 权限与保活卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔧 权限与保活"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_perms"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_outline"
+                android:text="申请全部权限"
+                android:textColor="#1E88E5"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_battery"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_btn_outline"
+                android:text="关闭电池优化（防被杀）"
+                android:textColor="#1E88E5"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_btn_outline"
+                android:text="允许后台弹出界面（悬浮窗）"
+                android:textColor="#1E88E5"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="注意：国产手机（小米/华为/OPPO/vivo）还需在系统设置中允许本应用自启动与后台运行，否则服务可能被杀。"
+                android:textSize="12sp"
+                android:textColor="#9E9E9E"
+                android:paddingTop="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

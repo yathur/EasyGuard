@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📩 美团提醒"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="按固定时间或倒计时提醒锁车，以全屏警示 + 闹铃 + 震动提醒（锁屏也能唤醒）。"
+            android:textSize="13sp"
+            android:textColor="#616161"
+            android:paddingTop="4dp" />
+
+        <!-- 音量卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔊 提醒音量"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+                <SeekBar
+                    android:id="@+id/seek_volume"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="100" />
+                <Button
+                    android:id="@+id/btn_play_sms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/bg_btn_outline"
+                    android:text="试听"
+                    android:textColor="#1E88E5"
+                    android:textSize="14sp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_volume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提醒音量：70%"
+                android:textSize="13sp"
+                android:textColor="#616161"
+                android:paddingTop="4dp" />
+        </LinearLayout>
+
+        <!-- 定时提醒卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="14dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⏰ 定时提醒锁车"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="每天固定时间提醒（如早上 09:00）"
+                    android:textSize="13sp"
+                    android:textColor="#424242" />
+                <Switch
+                    android:id="@+id/sw_fixed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_fixed_time"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit_rounded"
+                android:inputType="time"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:hint="点击选择时间（如 09:00）" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="倒计时提醒（骑行多久后提醒锁车）"
+                    android:textSize="13sp"
+                    android:textColor="#424242" />
+                <Switch
+                    android:id="@+id/sw_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+                <Button
+                    android:id="@+id/btn_minus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="－"
+                    android:textSize="16sp"
+                    android:textColor="#37474F" />
+                <EditText
+                    android:id="@+id/et_countdown"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_edit_rounded"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:hint="60" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分钟"
+                    android:textColor="#616161"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical" />
+                <Button
+                    android:id="@+id/btn_plus"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/bg_btn_step"
+                    android:text="＋"
+                    android:textSize="16sp"
+                    android:textColor="#37474F" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_countdown_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="倒计时：未设置"
+                android:textSize="13sp"
+                android:textColor="#616161"
+                android:paddingTop="8dp" />
+        </LinearLayout>
+
+        <!-- 控制区 -->
+        <Button
+            android:id="@+id/btn_full_screen"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_btn_outline"
+            android:text="开启锁屏全屏提醒（系统授权）"
+            android:textColor="#1E88E5"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_test_sms"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_btn_outline"
+            android:text="测试提醒"
+            android:textColor="#1E88E5"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_save_sms"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_btn_primary"
+            android:text="保存设置"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+</ScrollView>

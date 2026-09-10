@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="美团提醒 &amp; 打卡助手"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tv_home_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="美团提醒：-    打卡助手：-"
+        android:textSize="14sp"
+        android:textColor="#616161"
+        android:paddingBottom="12dp" />
+
+    <!-- 美团提醒卡片 -->
+    <LinearLayout
+        android:id="@+id/btn_home_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_card"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="18dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📩"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美团提醒"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收到美团短信 → 全屏闹铃提醒；固定时间 / 倒计时提醒锁车"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:paddingTop="3dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 打卡助手卡片 -->
+    <LinearLayout
+        android:id="@+id/btn_home_checkin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_card"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="18dp"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏢"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钉钉打卡助手"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到点 + 到打卡点 + 移动 → 自动打开钉钉，双时段可配次数"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:paddingTop="3dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="首次使用：进入对应模块 → 申请权限 → 关闭电池优化（防被杀）。国产手机还需在系统设置允许自启动与后台运行。"
+        android:textSize="12sp"
+        android:textColor="#9E9E9E"
+        android:paddingTop="24dp" />
+
+</LinearLayout>

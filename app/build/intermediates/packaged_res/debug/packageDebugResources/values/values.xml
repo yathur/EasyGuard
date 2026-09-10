@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#1A237E</color>
+    <string name="alert_channel_name">美团短信提醒</string>
+    <string name="app_name">无忧小卫</string>
+    <style name="Theme.Alert" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#C62828</item>
+    </style>
+    <style name="Theme.MeituanAlert" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorAccent">#1A237E</item>
+    </style>
+</resources>
